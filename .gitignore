@@ -1,5 +1,6 @@
 .idea/
 CoreCountMr/mr.core.count.iml
-DataStructureAlgorithm/DataStructureAlgorithm.iml
+DataStructureAlgorithm/ds.algo.iml
 VertX/VertX.iml
 com.sun.iml
+VertX/target
