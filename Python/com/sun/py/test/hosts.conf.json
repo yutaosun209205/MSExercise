@@ -1,0 +1,29 @@
+{
+    "business": "nex",
+    "hosts": [
+        "hzayq-pgad-nex1.server.163.org",
+        "hzayq-pgad-nex2.server.163.org",
+        "hzayq-pgad-nex3.server.163.org",
+        "hzayq-pgad-nex4.server.163.org",
+        "hzayq-pgad-nex5.server.163.org",
+        "hzayq-pgad-nex6.server.163.org",
+        "hzayq-pgad-nex7.server.163.org",
+        "hzayq-pgad-nex8.server.163.org",
+        "hzayq-pgad-nex9.server.163.org",
+        "hzayq-pgad-nex10.server.163.org",
+        "hzayq-pgad-nex11.server.163.org",
+        "hzayq-pgad-nex12.server.163.org",
+        "hzayq-pgad-nex13.server.163.org",
+        "hzayq-pgad-nex14.server.163.org"
+    ],
+    "logType": [
+        "access",
+        "consume",
+        "show",
+        "click",
+        "monitor"
+    ],
+    "path": "/user/ad_pangu/offline"
+}
+
+
