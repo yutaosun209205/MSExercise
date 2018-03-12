@@ -4,3 +4,5 @@ DataStructureAlgorithm/ds.algo.iml
 VertX/VertX.iml
 com.sun.iml
 VertX/target
+DataStructureAlgorithm/target
+.vertx/

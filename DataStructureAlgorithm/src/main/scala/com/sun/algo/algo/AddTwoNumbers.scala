@@ -17,7 +17,7 @@ object AddTwoNumbers {
     nn1.next = nn2
     nn2.next = nn3
 
-    var aa = addTwoNumbers(n1,nn1)
+    val aa = addTwoNumbers(n1,nn1)
 
     println(aa.x)
     println(aa.next.x)
