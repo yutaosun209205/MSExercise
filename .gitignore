@@ -6,3 +6,8 @@ com.sun.iml
 VertX/target
 DataStructureAlgorithm/target
 .vertx/
+Python/*.iml
+Spark/
+Spark/*.iml
+Spark/target
+Python/Python.iml

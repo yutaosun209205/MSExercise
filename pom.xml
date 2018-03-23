@@ -12,6 +12,7 @@
         <module>CoreCountMr</module>
         <module>DataStructureAlgorithm</module>
         <module>VertX</module>
+        <module>Spark</module>
     </modules>
 
     <properties>
