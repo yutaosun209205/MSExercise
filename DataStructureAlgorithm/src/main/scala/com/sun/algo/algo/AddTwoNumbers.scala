@@ -1,7 +1,10 @@
 package com.sun.algo.algo
 
+import javax.management.ListenerNotFoundException
+
 /**
   * Created by bjsunyutao on 2017/12/25.
+  * 两个数相加
   */
 object AddTwoNumbers {
   def main(args: Array[String]): Unit = {
@@ -17,51 +20,51 @@ object AddTwoNumbers {
     nn1.next = nn2
     nn2.next = nn3
 
+
     val aa = addTwoNumbers(n1,nn1)
 
-    println(aa.x)
-    println(aa.next.x)
-    println(aa.next.next.x)
-
+    println(aa)
+    var tmp = aa
+    while(tmp != null){
+      println(tmp.x)
+      tmp = tmp.next
+    }
   }
 
   def addTwoNumbers(l1: ListNode, l2: ListNode): ListNode = {
+    var listNode = None : Option[ListNode]
+    var last = listNode
     var cur1 = l1
     var cur2 = l2
     var y = 0
-    val listNode = new ListNode()
-    var cur = new ListNode()
-    while (cur1 != null && cur2 != null){
-      val sum = l1.x + l2.x + y
+    while (cur1 != null || cur2 != null){
+      val a = if(cur1 == null) 0 else cur1.x
+      val b = if(cur2 == null) 0 else cur2.x
+      val sum = a + b + y
+      y = 0
       val x = if(sum > 9){
-        y = 1
-        sum.toString.split("")(1).toInt
+        y = sum / 10
+        sum % 10
       }else{
-        y = 0
         sum
       }
-
-      cur1 = cur1.next
-      cur2 = cur2.next
-    }
-
-    if(l1.next == null && l2.next == null){
-      listNode
-    }else {
-      val a1 = l1.x
-      val a2 = l2.x
-      val a = a1 + a2 + y
-      if (a > 9) {
-        val x1 = a.toString.split("")(1).toInt
-        listNode.x = x1
-        y = 1
+      val tmp = new ListNode(x)
+      tmp.next = null
+      if(listNode.isEmpty){
+        listNode = Some(tmp)
+        last = listNode
       }else{
-        y = 0
-        listNode.x = a
+        last.get.next = tmp
+        last = Some(tmp)
       }
-      listNode.next = addTwoNumbers(l1.next,l2.next)
-      listNode
+      cur1 = if(cur1 == null) cur1 else cur1.next
+      cur2 = if(cur2 == null) cur2 else cur2.next
     }
+    if(y > 0 && !listNode.isEmpty){
+      val tmp = new ListNode(y)
+      last.get.next = tmp
+    }
+    listNode.getOrElse(new ListNode(-1))
   }
 }
 class ListNode(var _x: Int = 0) {

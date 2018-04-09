@@ -17,7 +17,8 @@ object CustomReceiverStreaming {
     }
     Logger.getLogger("org.apache.spark").setLevel(Level.ERROR)
     val conf = new SparkConf().setAppName("CustomReceiver")
-    val ssc = new StreamingContext(conf,Seconds(1))
+    val ssc = new StreamingContext(conf,Seconds(2))
+    ssc.sparkContext.longAccumulator("dd")
     val lines = ssc.receiverStream(new CustomReceiver(args(0), args(1).toInt))
     val words = lines.flatMap{f=> f.split(" ")}.map{f=> (f,1)}.reduceByKey(_ + _)
     words.print()
