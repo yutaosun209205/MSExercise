@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sun</groupId>
-    <artifactId>com.sun</artifactId>
+    <groupId>sun</groupId>
+    <artifactId>MSExercise</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -13,6 +13,8 @@
         <module>DataStructureAlgorithm</module>
         <module>VertX</module>
         <module>Spark</module>
+        <module>Python</module>
+        <module>Fundamentals</module>
     </modules>
 
     <properties>
@@ -21,6 +23,29 @@
         <hadoop.version>2.7.4</hadoop.version>
         <scala.version>2.12.4</scala.version>
         <vertx.version>3.4.2</vertx.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/junit/junit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.17</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
 
 </project>

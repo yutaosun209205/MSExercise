@@ -1,8 +1,8 @@
 .idea/
-CoreCountMr/mr.core.count.iml
-DataStructureAlgorithm/ds.algo.iml
+CoreCountMr/*.iml
+DataStructureAlgorithm/*.iml
 VertX/VertX.iml
-com.sun.iml
+*.iml
 VertX/target
 DataStructureAlgorithm/target
 .vertx/
@@ -11,3 +11,5 @@ Spark/
 Spark/*.iml
 Spark/target
 Python/Python.iml
+Fundamentals/*.iml
+Fundamentals/target/
